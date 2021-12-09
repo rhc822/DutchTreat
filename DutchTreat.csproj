@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\js\index.js" />
   </ItemGroup>
 
   <ItemGroup>
