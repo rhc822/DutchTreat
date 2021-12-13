@@ -1,47 +1,49 @@
-﻿var x = 0;
-var s = "";
+﻿$(document).ready(function () {
+    var x = 0;
+    var s = "";
 
-console.log("Hi");
+    console.log("Hi");
 
-// Vanilla JS
-/*
-var theForm = document.getElementById("theForm");
-theForm.hidden = true;
-*/
+    // Vanilla JS
+    /*
+    var theForm = document.getElementById("theForm");
+    theForm.hidden = true;
+    */
 
-// jQuery
+    // jQuery
 
-var theForm = $("#theForm");
-theForm.hide();
+    var theForm = $("theForm");
+    theForm.hide();
 
 
-// Vanilla JS
-/*
-var button = document.getElementById("buyButton");
-button.addEventListener("click", function () {
-    console.log("Buying Item");
-});
-*/
+    // Vanilla JS
+    /*
+    var button = document.getElementById("buyButton");
+    button.addEventListener("click", function () {
+        console.log("Buying Item");
+    });
+    */
 
-// jQuery
-var button = $("buyButton");
-button.on("click", function () {
-    console.log("Buying Item");
-});
+    // jQuery
+    var button = $("buyButton");
+    button.on("click", function () {
+        console.log("Buying Item");
+    });
 
-// Vanilla JS
-/*
-var productInfo = document.getElementsByClassName(".product-props");
-var listItems = productInfo.item[0].children;
-*/
+    // Vanilla JS
+    /*
+    var productInfo = document.getElementsByClassName(".product-props");
+    var listItems = productInfo.item[0].children;
+    */
 
-//jQuery
+    //jQuery
 
-/*
-  jQuery enables full CSS selector syntax in a query(e.g. 'li' in product info below), instead of looping through the object
-*/
-var productInfo = $(".product-props li");
-productInfo.on("click", function () {
-    console.log("You clicked on " + $(this).text());
+    /*
+      jQuery enables full CSS selector syntax in a query(e.g. 'li' in product info below), instead of looping through the object
+    */
+    var productInfo = $(".product-props li");
+    productInfo.on("click", function () {
+        console.log("You clicked on " + $(this).text());
+    });
 });
 
