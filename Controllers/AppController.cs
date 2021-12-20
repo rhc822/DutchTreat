@@ -13,7 +13,14 @@ namespace DutchTreat.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            try
+            {
+                return View();
+            }
+            catch
+            {
+                throw new InvalidProgramException("Bad things happen to good developers");
+            }
         }
     }
 }
