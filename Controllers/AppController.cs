@@ -22,5 +22,20 @@ namespace DutchTreat.Controllers
                 throw new InvalidProgramException("Bad things happen to good developers");
             }
         }
+
+        public IActionResult Contact()
+        {
+            ViewBag.Title = "Contacat Us";
+
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewBag.Title = "About Us";
+
+            return View();
+        }
+
     }
 }
