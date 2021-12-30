@@ -28,8 +28,12 @@ namespace DutchTreat.Controllers
         {
             ViewBag.Title = "Contact Us";
 
-            throw new InvalidProgramException("Bad things happen to good developers");
+            return View();
+        }
 
+        [HttpPost("contact")]
+        public IActionResult Contact(object model)
+        {
             return View();
         }
 
