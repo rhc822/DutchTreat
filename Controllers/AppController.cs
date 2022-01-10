@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 /*
 
-TODO: Replace "object" in (object model), line 43, with "string" and see what happens
+TODO: Replace "object" in (object model), line 43, with "string" and see what happens. COMES BACK "NULL".
     
 HELP:
     - Mod5/9, 1:06 "This time we're going to accept some payload from the page" line 40, object model. Why just "object"?
