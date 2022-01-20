@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace DutchTreat.ViewModels
 {
+    /*
+     * HELP: Client-side validation doesn't work for Name field, MinLength ("Required" DOES work for both)
+     */
+
     public class ContactViewModel
     {
         [Required]
@@ -17,7 +21,7 @@ namespace DutchTreat.ViewModels
         [Required]
         public string Subject { get; set; }
         [Required]
-        [MaxLength(50)]
+        [MaxLength(50, ErrorMessage ="Message too long")]
         public string Message { get; set; }
     }
 }

@@ -1,30 +1,39 @@
 ﻿@*
     HELP:
-        - VS "Autos" debug window helpful. Do you use these?
-        - Mod5/9, 4:34 ViewBag title is "sent down"? From controller > Contact.cshmtl > to _Layout?
+        -
 *@
 
 @model ContactViewModel
 @{
     ViewBag.Title = "Contact Us";
 }
+
+@section Scripts{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"></script>
+}
+
 <form method="post">
-    <div asp-validation-summary="All"></div>
+    <div asp-validation-summary="ModelOnly"></div>
     <label asp-for="Name">Your Name:</label>
     <br />
-    <input asp-for="Name" name="name" />
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
     <br />
     <label asp-for="Email">Email:</label>
     <br />
     <input type="email" asp-for="Email" />
+    <span asp-validation-for="Email"></span>
     <br />
     <label asp-for="Subject">Subject:</label>
     <br />
     <input type="text" asp-for="Subject" />
+    <span asp-validation-for="Subject"></span>
     <br />
     <label asp-for="Message">Message:</label>
     <br />
     <textarea rows="4" asp-for="Message"></textarea>
     <br />
+    <span asp-validation-for="Message"></span>
     <input type="submit" value="Send Message" />
 </form>
