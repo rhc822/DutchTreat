@@ -1,4 +1,19 @@
-﻿
+﻿/*#testrow {
+    background-color: gray;
+}*/
+
+#testcol1 {
+    background-color: darkblue;
+}
+
+#testcol2 {
+    background-color: yellow;
+}
+
+/*#testform {
+    background-color: orangered;
+}*/
+
 /*body {
     font-family: 'Segoe UI', Tahoma, Verdana, Geneva, Tahoma, sans-serif
 }
