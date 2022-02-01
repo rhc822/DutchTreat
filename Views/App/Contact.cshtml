@@ -17,29 +17,30 @@
     <div class="card card-body bg-light">
         <form method="post">
             <div asp-validation-summary="ModelOnly"></div>
-                <div>
-                    <label class="form-label fw-bold" asp-for="Name">Your Name:</label>
-                    <input class="form-control" asp-for="Name" />
-                    <span asp-validation-for="Name"></span>
-                </div>
-                <div>
-                    <label class="form-label fw-bold" asp-for="Email">Email:</label>
-                    <input class="form-control" type="email" asp-for="Email" />
-                    <span asp-validation-for="Email"></span>
-                </div>    
-                <div>
-                    <label class="form-label fw-bold" asp-for="Subject">Subject:</label>
-                    <input class="form-control" type="text" asp-for="Subject" />
-                    <span asp-validation-for="Subject"></span>
-                </div>
-                <div>
-                    <label class="form-label fw-bold" asp-for="Message">Message:</label>
-                    <textarea class="form-control" rows="4" asp-for="Message"></textarea>
-                    <span asp-validation-for="Message"></span>
-                </div>
-                
+            <div>
+                <label class="form-label fw-bold" asp-for="Name">Your Name:</label>
+                <input class="form-control" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label fw-bold" asp-for="Email">Email:</label>
+                <input class="form-control" type="email" asp-for="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label fw-bold" asp-for="Subject">Subject:</label>
+                <input class="form-control" type="text" asp-for="Subject" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div>
+                <label class="form-label fw-bold" asp-for="Message">Message:</label>
+                <textarea class="form-control" rows="4" asp-for="Message"></textarea>
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>                
+            <div class="btn-group mt-3">
                 <input class="btn btn-primary" type="submit" value="Send Message" />
-            <div>@ViewBag.UserMessage</div>
+                <div class="text-success">@ViewBag.UserMessage</div>
+            </div>
         </form>
     </div>
 </div>
