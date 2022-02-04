@@ -4,5 +4,24 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
+    <Compile Remove="BuildingASPNETCore2-master\**" />
+    <Content Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
+    <Content Remove="BuildingASPNETCore2-master\**" />
+    <EmbeddedResource Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
+    <EmbeddedResource Remove="BuildingASPNETCore2-master\**" />
+    <None Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
+    <None Remove="BuildingASPNETCore2-master\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 
 </Project>

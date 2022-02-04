@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/aspnetcore-mvc-efcore-bootstrap-angular-web (1)
+/BuildingASPNETCore2-master/BuildingASPNETCore2-master
