@@ -16,7 +16,7 @@ namespace DutchTreat.Data
         {
             base.OnConfiguring(optionsBuilder);
 
-            
+            //optionsBuilder.UseSqlServer();
         }
     }
 }
