@@ -40,7 +40,7 @@ namespace DutchTreat.Controllers
             }
         }
 
-        [HttpGet("contact")]
+        [HttpGet("Contact")]
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact Us";
@@ -48,7 +48,7 @@ namespace DutchTreat.Controllers
             return View();
         }
 
-        [HttpPost("contact")]
+        [HttpPost("Contact")]
         public IActionResult Contact(ContactViewModel model)
         {
             if (ModelState.IsValid)
@@ -63,6 +63,7 @@ namespace DutchTreat.Controllers
             return View();
         }
 
+        [HttpGet("About")]
         public IActionResult About()
         {
             ViewBag.Title = "About Us";
@@ -70,6 +71,7 @@ namespace DutchTreat.Controllers
             return View();
         }
 
+        [HttpGet("Shop")]
         public IActionResult Shop()
         {
             var results = from p in _context.Products

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DutchTreat.ViewModels
 {
     /*
-     * HELP: Client-side validation doesn't work for Name field, MinLength ("Required" DOES work for both)
+     * HELP: ...
      */
 
     public class ContactViewModel
