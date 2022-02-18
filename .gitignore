@@ -3,6 +3,23 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Pluralsight downloaded course files
+/zDutchTreatPluralsightCourseFiles/02
+/zDutchTreatPluralsightCourseFiles/03
+/zDutchTreatPluralsightCourseFiles/04
+/zDutchTreatPluralsightCourseFiles/05
+/zDutchTreatPluralsightCourseFiles/06
+/zDutchTreatPluralsightCourseFiles/08
+/zDutchTreatPluralsightCourseFiles/09
+/zDutchTreatPluralsightCourseFiles/10
+/zDutchTreatPluralsightCourseFiles/11
+/zDutchTreatPluralsightCourseFiles/12
+/zDutchTreatPluralsightCourseFiles/13
+/zDutchTreatPluralsightCourseFiles/14
+/zDutchTreatPluralsightCourseFiles/BigProject
+/zDutchTreatPluralsightCourseFiles/OLD_VERSION_Resources
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -361,5 +378,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/aspnetcore-mvc-efcore-bootstrap-angular-web (1)
-/BuildingASPNETCore2-master/BuildingASPNETCore2-master
+

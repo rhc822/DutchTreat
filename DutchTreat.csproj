@@ -5,15 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
-    <Compile Remove="BuildingASPNETCore2-master\**" />
-    <Content Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
-    <Content Remove="BuildingASPNETCore2-master\**" />
-    <EmbeddedResource Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
-    <EmbeddedResource Remove="BuildingASPNETCore2-master\**" />
-    <None Remove="aspnetcore-mvc-efcore-bootstrap-angular-web %281%29\**" />
-    <None Remove="BuildingASPNETCore2-master\**" />
+    <Compile Remove="zDutchTreatPluralsightCourseFiles\**" />
+    <Content Remove="zDutchTreatPluralsightCourseFiles\**" />
+    <EmbeddedResource Remove="zDutchTreatPluralsightCourseFiles\**" />
+    <None Remove="zDutchTreatPluralsightCourseFiles\**" />
   </ItemGroup>
+
+
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
