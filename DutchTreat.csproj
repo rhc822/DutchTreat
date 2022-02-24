@@ -10,22 +10,8 @@
 
   <ItemGroup>
     <Compile Remove="zDutchTreatPluralsightCourseFiles\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\02\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\03\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\04\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\05\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\06\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\07\**" />
+	<Content Remove="zDutchTreatPluralsightCourseFiles\**" />
 	<Content Include="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\Data\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\08\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\09\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\10\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\11\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\12\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\13\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\14\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\BigProject\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\OLD_VERSION_Resources\**" />
     <EmbeddedResource Remove="zDutchTreatPluralsightCourseFiles\**" />
     <None Remove="zDutchTreatPluralsightCourseFiles\**" />
   </ItemGroup>
