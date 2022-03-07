@@ -11,7 +11,9 @@
   <ItemGroup>
     <Compile Remove="zDutchTreatPluralsightCourseFiles\**" />
 	<Content Remove="zDutchTreatPluralsightCourseFiles\**" />
-	<Content Include="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\Data\**" />
+	<Content Include="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\**" />
+	<Content Remove="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\DutchTreat.csproj" />
+	  <Content Remove="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\DutchTreat.sln" />
     <EmbeddedResource Remove="zDutchTreatPluralsightCourseFiles\**" />
     <None Remove="zDutchTreatPluralsightCourseFiles\**" />
   </ItemGroup>
