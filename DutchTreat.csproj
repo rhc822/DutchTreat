@@ -9,23 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="zDutchTreatPluralsightCourseFiles\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\**" />
-	<Content Include="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\**" />
-	<Content Remove="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\DutchTreat.csproj" />
-	  <Content Remove="zDutchTreatPluralsightCourseFiles\07\demos\demos\3.1\after\DutchTreat\DutchTreat.sln" />
-    <EmbeddedResource Remove="zDutchTreatPluralsightCourseFiles\**" />
-    <None Remove="zDutchTreatPluralsightCourseFiles\**" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.22" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.22">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.22" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 
