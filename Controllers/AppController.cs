@@ -30,14 +30,8 @@ namespace DutchTreat.Controllers
         } 
         public IActionResult Index()
         {
-            try
-            {
-                return View();
-            }
-            catch
-            {
-                throw new InvalidProgramException("Bad things happen to good developers");
-            }
+            var results = _context.Products.ToList();
+            return View();
         }
 
         [HttpGet("Contact")]
