@@ -19,11 +19,35 @@ namespace DutchTreat.Controllers
             _repository = repository;
             _logger = logger;
         }
-        
+
+        //[HttpGet]
+        //public IEnumerable<Product> Get()
+        //{
+        //    try
+        //    {
+        //        return _repository.GetAllProducts().ToList().FirstOrDefault();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError($"Failed to get products: {ex}");
+        //        return null;
+        //    }
+        //}
+
         [HttpGet]
-        public IEnumerable<Product> Get()
+        public JsonResult Get()
         {
-            return _repository.GetAllProducts();
+            try
+            {
+                //throw new Exception();
+                return Json(_repository.GetAllProducts().ToList().FirstOrDefault());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get products: {ex}");
+                return Json("Bad request");
+            }
         }
+
     }
 }
