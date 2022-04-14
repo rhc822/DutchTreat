@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 namespace DutchTreat.Controllers
 {
     [Route("api/[Controller]")]
-    public class ProductsController : Controller
+    [ApiController]
+    [Produces("application/json")]
+    public class ProductsController : ControllerBase
     {
         private readonly IDutchRepository _repository;
         private readonly ILogger<ProductsController> _logger;
@@ -20,12 +22,48 @@ namespace DutchTreat.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        public ActionResult<IEnumerable<Product>> Get()
+        {
+            try
+            {
+                //throw new Exception();
+                return Ok(_repository.GetAllProducts());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Failed to get products: {ex}");
+                return BadRequest("Failed to get products");
+            }
+        }
+
+        //[HttpGet]
+        //public IActionResult Get()
+        //{
+        //    try
+        //    {
+        //        //throw new Exception();
+        //        return Ok(_repository.GetAllProducts());
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError($"Failed to get products: {ex}");
+        //        return BadRequest("Failed to get products");
+        //    }
+        //}
+
+        /*
+         * Returning the pure type; problematic if you want to return anything other than all the products or nothing
+         */
         //[HttpGet]
         //public IEnumerable<Product> Get()
         //{
         //    try
         //    {
-        //        return _repository.GetAllProducts().ToList().FirstOrDefault();
+        //        throw new Exception();
+        //        return _repository.GetAllProducts();
         //    }
         //    catch (Exception ex)
         //    {
@@ -34,20 +72,24 @@ namespace DutchTreat.Controllers
         //    }
         //}
 
-        [HttpGet]
-        public JsonResult Get()
-        {
-            try
-            {
-                //throw new Exception();
-                return Json(_repository.GetAllProducts().ToList().FirstOrDefault());
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Failed to get products: {ex}");
-                return Json("Bad request");
-            }
-        }
+        /*
+         * Return JSON; problematic if you want to use another type, too rigid
+         */
+        //[HttpGet]
+        //public JsonResult Get()
+        //{
+        //    try
+        //    {
+        //        //throw new Exception();
+        //        return Json(_repository.GetAllProducts());
+        //            //.ToList().FirstOrDefault()) ;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError($"Failed to get products: {ex}");
+        //        return Json("Bad request");
+        //    }
+        //}
 
     }
 }
