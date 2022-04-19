@@ -54,23 +54,6 @@ namespace DutchTreat.Controllers
         //    }
         //}
 
-        /*
-         * Returning the pure type; problematic if you want to return anything other than all the products or nothing
-         */
-        //[HttpGet]
-        //public IEnumerable<Product> Get()
-        //{
-        //    try
-        //    {
-        //        throw new Exception();
-        //        return _repository.GetAllProducts();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError($"Failed to get products: {ex}");
-        //        return null;
-        //    }
-        //}
 
         /*
          * Return JSON; problematic if you want to use another type, too rigid
@@ -91,5 +74,22 @@ namespace DutchTreat.Controllers
         //    }
         //}
 
+        /*
+         * Returning the pure type; problematic if you want to return anything other than all the products or nothing
+         */
+        //[HttpGet]
+        //public IEnumerable<Product> Get()
+        //{
+        //    try
+        //    {
+        //        throw new Exception();
+        //        return _repository.GetAllProducts();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError($"Failed to get products: {ex}");
+        //        return null;
+        //    }
+        //}
     }
 }
