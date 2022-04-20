@@ -1,4 +1,5 @@
 ﻿using DutchTreat.Data.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,6 @@ namespace DutchTreat.Data
             _ctx = ctx;
             _logger = logger;
         }
-
-        public IEnumerable<Order> GetAllOrders()
-        {
-            return _ctx.Orders.ToList();
-        }
-
         public IEnumerable<Product> GetAllProducts()
         {
             try
@@ -46,6 +41,19 @@ namespace DutchTreat.Data
             return _ctx.Products
                 .Where(p => p.Category == category)
                 .ToList();
+        }
+
+        public IEnumerable<Order> GetAllOrders()
+        {
+            return _ctx.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .ToList();
+        }
+
+        public Order GetOrderById(int id)
+        {
+            return _ctx.Orders.Find(id);
         }
 
         public bool SaveAll()
