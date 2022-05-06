@@ -53,7 +53,11 @@ namespace DutchTreat.Data
 
         public Order GetOrderById(int id)
         {
-            return _ctx.Orders.Find(id);
+            return _ctx.Orders
+                .Include(o => o.Items)
+                .ThenInclude(i => i.Product)
+                .Where(o => o.Id == id)
+                .FirstOrDefault();
         }
 
         public bool SaveAll()
