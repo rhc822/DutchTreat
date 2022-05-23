@@ -1,5 +1,6 @@
 ﻿using DutchTreat.Data.Entities;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,16 +14,38 @@ namespace DutchTreat.Data
     {
         private readonly DutchContext _ctx;
         private readonly IWebHostEnvironment _env;
+        private readonly UserManager<StoreUser> _userManager;
 
-        public DutchSeeder(DutchContext ctx, IWebHostEnvironment env)
+        public DutchSeeder(DutchContext ctx, IWebHostEnvironment env, UserManager<StoreUser> userManager)
         {
             _ctx = ctx;
             _env = env;
+            _userManager = userManager;
         }
 
-        public void Seed()
+        public async Task SeedAsync()
         {
             _ctx.Database.EnsureCreated();
+
+            StoreUser user = await _userManager.FindByEmailAsync("shawn@dutchtreat.com");
+
+            if (user == null)
+            {
+                user = new StoreUser()
+                {
+                    FirstName = "Shawn",
+                    LastName = "Wildermuth",
+                    Email = "shawn@dutchtreat.com",
+                    UserName = "shawn@dutchtreat.com"
+                };
+
+                var result = await _userManager.CreateAsync(user, "P@ssw0rd!");
+
+                if (result != IdentityResult.Success)
+                {
+                    throw new InvalidOperationException("Could not create new user in seeder");
+                }
+            }
 
             if (!_ctx.Products.Any())
             {
