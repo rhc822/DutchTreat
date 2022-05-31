@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module7DutchTreat", "..\zDu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module8DutchTreat", "..\zDutchTreatPluralsightCourseFiles\08\demos\demos\3.1\after\DutchTreat\Module8DutchTreat.csproj", "{46E1B975-25BE-4585-84E4-2BE596BEC748}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Module9DutchTreat", "..\zDutchTreatPluralsightCourseFiles\09\demos\demos\3.1\after\DutchTreat\Module9DutchTreat.csproj", "{E1D6DACA-F17C-4EA1-82A6-76AE958B5E43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,13 +22,14 @@ Global
 		{4941EEBC-5F0E-4F21-919D-E668D9D480EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4941EEBC-5F0E-4F21-919D-E668D9D480EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6774FF4A-294A-44C8-8422-D41DDA8057F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6774FF4A-294A-44C8-8422-D41DDA8057F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6774FF4A-294A-44C8-8422-D41DDA8057F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6774FF4A-294A-44C8-8422-D41DDA8057F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{46E1B975-25BE-4585-84E4-2BE596BEC748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46E1B975-25BE-4585-84E4-2BE596BEC748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E1B975-25BE-4585-84E4-2BE596BEC748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E1B975-25BE-4585-84E4-2BE596BEC748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D6DACA-F17C-4EA1-82A6-76AE958B5E43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D6DACA-F17C-4EA1-82A6-76AE958B5E43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D6DACA-F17C-4EA1-82A6-76AE958B5E43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
