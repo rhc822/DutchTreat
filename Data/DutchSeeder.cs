@@ -13,13 +13,13 @@ namespace DutchTreat.Data
     public class DutchSeeder
     {
         private readonly DutchContext _ctx;
-        private readonly IWebHostEnvironment _env;
+        private readonly IWebHostEnvironment _hosting;
         private readonly UserManager<StoreUser> _userManager;
 
-        public DutchSeeder(DutchContext ctx, IWebHostEnvironment env, UserManager<StoreUser> userManager)
+        public DutchSeeder(DutchContext ctx, IWebHostEnvironment hosting, UserManager<StoreUser> userManager)
         {
             _ctx = ctx;
-            _env = env;
+            _hosting = hosting;
             _userManager = userManager;
         }
 
@@ -50,7 +50,7 @@ namespace DutchTreat.Data
             if (!_ctx.Products.Any())
             {
                 
-                var filePath = Path.Combine(_env.ContentRootPath, "Data/art.json");
+                var filePath = Path.Combine(_hosting.ContentRootPath, "Data/art.json");
                 var json = File.ReadAllText(filePath);
                 var products = JsonSerializer.Deserialize<IEnumerable<Product>>(json);
                 _ctx.Products.AddRange(products);

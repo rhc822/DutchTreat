@@ -18,9 +18,10 @@ namespace DutchTreat
         {
             var host = CreateHostBuilder(args).Build();
 
-            if (args.Length == 1 && args[0].ToLower() == "/seed")
+            if (args.Length > 0 && args[0].ToLower() == "/seed")
             {
                 RunSeeding(host);
+                return;
             }
             else
             {
@@ -33,7 +34,7 @@ namespace DutchTreat
             using (var scope = scopeFactory.CreateScope())
             {
             var seeder = scope.ServiceProvider.GetService<DutchSeeder>();
-            seeder.SeedAsync();
+            seeder.SeedAsync().Wait();
             }
         }
 
@@ -47,10 +48,10 @@ namespace DutchTreat
 
         private static void AddConfiguration(HostBuilderContext ctx, IConfigurationBuilder bldr)
         {
+            // Removing the default configuration options
             bldr.Sources.Clear();
 
-            bldr.SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("config.json")
+            bldr.AddJsonFile("config.json", false, true)
                 .AddEnvironmentVariables();
         }
     }
