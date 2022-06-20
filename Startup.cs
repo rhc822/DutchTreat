@@ -14,6 +14,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using System.Reflection;
+using DutchTreat.Data.Entities;
+using Microsoft.AspNetCore.Identity;
 
 namespace DutchTreat
 {
@@ -28,6 +30,11 @@ namespace DutchTreat
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddIdentity<StoreUser, IdentityRole>(cfg =>
+            {
+                cfg.User.RequireUniqueEmail = true;
+            })
+                .AddEntityFrameworkStores<DutchContext>();
 
             services.AddDbContext<DutchContext>(cfg => 
             {
@@ -64,6 +71,9 @@ namespace DutchTreat
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(cfg =>
             {
